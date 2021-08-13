@@ -23,7 +23,8 @@ import io.swagger.annotations.*;
 @RestController
 public class RestCalculator {
 	
-	// http://localhost/addCal/10/20
+	// http://localhost/addCal
+
 	@RequestMapping(value = "/addCal/{param1}/{param2}", method = RequestMethod.GET)
 	public int add(@PathVariable(name="param1") int param1, @PathVariable int param2) throws Exception {
 		int sum=param1 + param2;
