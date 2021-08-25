@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "SoapCalculator", targetNamespace = "http://webservice.tutorial.com/")
+@WebService(name = "SoapCalculator", targetNamespace = "http://soap.webservice.tutorial.com/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -33,9 +33,9 @@ public interface SoapCalculator {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "add", targetNamespace = "http://webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.Add")
-    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.AddResponse")
-    @Action(input = "http://webservice.tutorial.com/SoapCalculator/addRequest", output = "http://webservice.tutorial.com/SoapCalculator/addResponse")
+    @RequestWrapper(localName = "add", targetNamespace = "http://soap.webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.Add")
+    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://soap.webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.AddResponse")
+    @Action(input = "http://soap.webservice.tutorial.com/SoapCalculator/addRequest", output = "http://soap.webservice.tutorial.com/SoapCalculator/addResponse")
     public int add(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,
@@ -51,9 +51,9 @@ public interface SoapCalculator {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "login", targetNamespace = "http://webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.Login")
-    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.LoginResponse")
-    @Action(input = "http://webservice.tutorial.com/SoapCalculator/loginRequest", output = "http://webservice.tutorial.com/SoapCalculator/loginResponse")
+    @RequestWrapper(localName = "login", targetNamespace = "http://soap.webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.Login")
+    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://soap.webservice.tutorial.com/", className = "com.tutorial.webserviceClient.soap.LoginResponse")
+    @Action(input = "http://soap.webservice.tutorial.com/SoapCalculator/loginRequest", output = "http://soap.webservice.tutorial.com/SoapCalculator/loginResponse")
     public boolean login(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0,

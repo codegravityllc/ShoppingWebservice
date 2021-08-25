@@ -66,7 +66,7 @@
 					<execution>
 						<configuration>
 							<wsdlUrls>
-								<wsdlUrl>http://localhost:7777/soap?wsdl</wsdlUrl>
+								<wsdlUrl>http://localhost:9090/soap?wsdl</wsdlUrl>
 							</wsdlUrls>
 							<packageName>com.tutorial.webserviceClient.soap</packageName>
 							<keep>true</keep>

@@ -1,5 +1,6 @@
 package com.tutorial.webservice.rest;
 
+import org.apache.log4j.Logger;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,9 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class Calculator{
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
+@RestController
+@Api(description="this is my service to add and substract")
+public class Calculator{
+	Logger log=Logger.getLogger("Calculator");
+	@ApiOperation(value="this is used for adding 2 numbers")
 	@RequestMapping(value = "/addition", method = RequestMethod.GET)
 	public int add(@RequestParam("input1") int a, @RequestParam("input2") int b) {
 		return a+b;

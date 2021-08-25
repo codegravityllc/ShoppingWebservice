@@ -1,2 +1,2 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://webservice.tutorial.com/")
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://soap.webservice.tutorial.com/")
 package com.tutorial.webserviceClient.soap;

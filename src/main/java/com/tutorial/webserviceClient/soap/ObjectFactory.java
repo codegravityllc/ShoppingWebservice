@@ -24,10 +24,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Login_QNAME = new QName("http://webservice.tutorial.com/", "login");
-    private final static QName _AddResponse_QNAME = new QName("http://webservice.tutorial.com/", "addResponse");
-    private final static QName _Add_QNAME = new QName("http://webservice.tutorial.com/", "add");
-    private final static QName _LoginResponse_QNAME = new QName("http://webservice.tutorial.com/", "loginResponse");
+    private final static QName _LoginResponse_QNAME = new QName("http://soap.webservice.tutorial.com/", "loginResponse");
+    private final static QName _Add_QNAME = new QName("http://soap.webservice.tutorial.com/", "add");
+    private final static QName _AddResponse_QNAME = new QName("http://soap.webservice.tutorial.com/", "addResponse");
+    private final static QName _Login_QNAME = new QName("http://soap.webservice.tutorial.com/", "login");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.tutorial.webserviceClient.soap
@@ -69,39 +69,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Login }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.tutorial.com/", name = "login")
-    public JAXBElement<Login> createLogin(Login value) {
-        return new JAXBElement<Login>(_Login_QNAME, Login.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.tutorial.com/", name = "addResponse")
-    public JAXBElement<AddResponse> createAddResponse(AddResponse value) {
-        return new JAXBElement<AddResponse>(_AddResponse_QNAME, AddResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.webservice.tutorial.com/", name = "loginResponse")
+    public JAXBElement<LoginResponse> createLoginResponse(LoginResponse value) {
+        return new JAXBElement<LoginResponse>(_LoginResponse_QNAME, LoginResponse.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Add }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.tutorial.com/", name = "add")
+    @XmlElementDecl(namespace = "http://soap.webservice.tutorial.com/", name = "add")
     public JAXBElement<Add> createAdd(Add value) {
         return new JAXBElement<Add>(_Add_QNAME, Add.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LoginResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.tutorial.com/", name = "loginResponse")
-    public JAXBElement<LoginResponse> createLoginResponse(LoginResponse value) {
-        return new JAXBElement<LoginResponse>(_LoginResponse_QNAME, LoginResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.webservice.tutorial.com/", name = "addResponse")
+    public JAXBElement<AddResponse> createAddResponse(AddResponse value) {
+        return new JAXBElement<AddResponse>(_AddResponse_QNAME, AddResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Login }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.webservice.tutorial.com/", name = "login")
+    public JAXBElement<Login> createLogin(Login value) {
+        return new JAXBElement<Login>(_Login_QNAME, Login.class, null, value);
     }
 
 }

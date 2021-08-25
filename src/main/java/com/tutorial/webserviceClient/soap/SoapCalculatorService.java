@@ -17,20 +17,20 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "SoapCalculatorService", targetNamespace = "http://webservice.tutorial.com/", wsdlLocation = "http://localhost:7777/soap?wsdl")
+@WebServiceClient(name = "SoapCalculatorService", targetNamespace = "http://soap.webservice.tutorial.com/", wsdlLocation = "http://localhost:9090/soap?wsdl")
 public class SoapCalculatorService
     extends Service
 {
 
     private final static URL SOAPCALCULATORSERVICE_WSDL_LOCATION;
     private final static WebServiceException SOAPCALCULATORSERVICE_EXCEPTION;
-    private final static QName SOAPCALCULATORSERVICE_QNAME = new QName("http://webservice.tutorial.com/", "SoapCalculatorService");
+    private final static QName SOAPCALCULATORSERVICE_QNAME = new QName("http://soap.webservice.tutorial.com/", "SoapCalculatorService");
 
     static {
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:7777/soap?wsdl");
+            url = new URL("http://localhost:9090/soap?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
@@ -69,7 +69,7 @@ public class SoapCalculatorService
      */
     @WebEndpoint(name = "SoapCalculatorPort")
     public SoapCalculator getSoapCalculatorPort() {
-        return super.getPort(new QName("http://webservice.tutorial.com/", "SoapCalculatorPort"), SoapCalculator.class);
+        return super.getPort(new QName("http://soap.webservice.tutorial.com/", "SoapCalculatorPort"), SoapCalculator.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class SoapCalculatorService
      */
     @WebEndpoint(name = "SoapCalculatorPort")
     public SoapCalculator getSoapCalculatorPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://webservice.tutorial.com/", "SoapCalculatorPort"), SoapCalculator.class, features);
+        return super.getPort(new QName("http://soap.webservice.tutorial.com/", "SoapCalculatorPort"), SoapCalculator.class, features);
     }
 
     private static URL __getWsdlLocation() {

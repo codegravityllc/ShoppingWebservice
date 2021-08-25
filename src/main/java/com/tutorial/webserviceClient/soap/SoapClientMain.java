@@ -9,8 +9,9 @@ public class SoapClientMain {
 	}
 	public static void testAddService() {
 		SoapCalculatorService sc=new SoapCalculatorService();
-		int res=sc.getSoapCalculatorPort().add(12, 10);
+		int res=sc.getSoapCalculatorPort().add(20, 25);
 		System.out.println("Soap webservice Add Result:"+res);
 	}
 	
 }
+

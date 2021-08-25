@@ -20,9 +20,13 @@ public class RestClientMain {
 */
 	public static void testAdd() {
 		RestTemplate getTest=new RestTemplate(); // similar to soap stub program
-		int res=getTest.getForObject("http://localhost:8888/addCal/3/5", Integer.class);
+		int res=getTest.getForObject("http://localhost:8888/addCal/3/12", 
+				Integer.class);
 		System.out.println("Add rest service result :"+res);
 	}
+	// get method
+	// URL = url include http part + input
+	// output = resonse
 	public static void testSub() {
 		RestTemplate getTest=new RestTemplate();
 		int res=getTest.getForObject("http://localhost:8888/subCal?param1=100&param2=20", Integer.class);
@@ -40,9 +44,11 @@ public class RestClientMain {
 		RestTemplate postTest=new RestTemplate();
 		Input input=new Input();
 		input.param1=20; 
-		input.param2=50; 
+		input.param2=100; 
 		// { "param1":20 , "param2":50 }
-		int res=postTest.postForObject("http://localhost:8888/jsonReqMul", input,Integer.class);
+		int res=postTest.postForObject("http://localhost:8888/jsonReqMul",
+				input,
+				Integer.class);
 		// Rest template
 		// 1) convert input reference into json string. { "param1":20 , "param2":50 }
 		// 2) make a call to url.. and pass above json string in the body
