@@ -7,10 +7,10 @@ import com.tutorial.webserviceClient.rest.Output;
 public class RestClientMain {
 
 	public static void main(String[] args) {
-		testAdd();
-		testSub();
-		testMultiplyJsonReq();
-		testJsonRes();
+		testAdd(); // Consume get rest service with path param
+		testSub(); // Consume get rest service with query string input
+		testJsonRes(); // Consume get rest service with JSON output
+		testMultiplyJsonReq(); // Consume post rest service with JSON input
 	}
 /*	
 	Get Http client

@@ -23,22 +23,19 @@ import io.swagger.annotations.*;
 @RestController
 public class RestCalculator {
 	
+	 
 	// http://localhost:8888/addCal/12/10
 	Logger log=Logger.getLogger("RestCalculator");
 	@RequestMapping(value = "/addCal/{param1}/{param2}", method = RequestMethod.GET)
 	public int add(@PathVariable(name="param1") int param1, @PathVariable int param2) throws Exception {
-		log.debug("entering add method");
-		int sum=0;
-		try {
-			if(param1 < -1)
-				log.warn("warnign customer attempted to add negative number");
-			sum=param1 + param2;
-			log.info("sum for this customer:"+sum);
-		}catch(Exception e) {
-			log.error("error add hello log4j", e);
-		}
-		log.debug("exiting add hello log4j");
-		return sum;
+		log.debug("debugging");
+		log.info("information");
+		log.warn("warning");
+		log.error("error");
+		// debug >  info > warn > error
+		int	sum=param1 + param2;
+	
+	return sum;
 	}
 
 	// http://localhost/subCal?param1=10&param2=5
